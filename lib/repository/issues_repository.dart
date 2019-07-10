@@ -1,5 +1,3 @@
-
-
 class IssuesRepository {
   IssuesRepository._();
 

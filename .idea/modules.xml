@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/GithubClient_Flutter.iml" filepath="$PROJECT_DIR$/.idea/GithubClient_Flutter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GithubClient_Flutter.iml" filepath="$PROJECT_DIR$/GithubClient_Flutter.iml" />
     </modules>
   </component>
 </project>
