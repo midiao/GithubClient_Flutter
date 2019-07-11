@@ -11,8 +11,12 @@ import 'package:provider/provider.dart';
 
 void main() {
   var globalUserInfoModel = GlobalUserModel();
+  var loginModel = LoginPageModel();
   runApp(MultiProvider(
-    providers: [ChangeNotifierProvider.value(value: globalUserInfoModel)],
+    providers: [
+      ChangeNotifierProvider.value(value: globalUserInfoModel),
+      ChangeNotifierProvider.value(value: loginModel)
+    ],
     child: MyApp(),
   ));
 }

@@ -2,6 +2,7 @@ import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:github_client/routers/route_handler.dart';
 import 'package:github_client/ui/login/login_page.dart';
+import 'package:github_client/ui/main/main_page.dart';
 
 class Routes {
   static String root = '/';
@@ -14,6 +15,7 @@ class Routes {
     });
 
     router
-      ..define(LoginPage.path, handler: loginHandler);
+      ..define(LoginPage.path, handler: loginHandler)
+      ..define(MainPage.path, handler: mainHandler);
   }
 }
