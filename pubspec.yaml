@@ -27,6 +27,8 @@ dependencies:
   fluttertoast: ^3.0.1
   fluro: ^1.4.0
   common_utils: ^1.1.1
+  flutter_swiper: ^1.1.4
+  flutter_easyrefresh: ^1.2.7
 
 dev_dependencies:
   flutter_test:
