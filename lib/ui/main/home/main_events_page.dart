@@ -12,8 +12,7 @@ import 'package:provider/provider.dart';
 class MainEventsPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
-    return null;
+    return _MainEventsPageState();
   }
 }
 
