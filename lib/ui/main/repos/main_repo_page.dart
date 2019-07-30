@@ -39,22 +39,23 @@ class _MainReposPageState extends State<MainReposPage>
                     sort: newValue);
               },
               itemBuilder: (context) => <PopupMenuItem<String>>[
-                PopupMenuItem(
-                  child: Text('Sort by Update'),
-                  value: 'updated',
-                ),
-                PopupMenuItem(
-                  child: Text('Sort by Created'),
-                  value: 'created',
-                ),
-                PopupMenuItem(
-                  child: Text('Sort by FullName'),
-                  value: 'full_name',
-                )
-              ],
+                    PopupMenuItem(
+                      child: Text('Sort by Update'),
+                      value: 'updated',
+                    ),
+                    PopupMenuItem(
+                      child: Text('Sort by Created'),
+                      value: 'created',
+                    ),
+                    PopupMenuItem(
+                      child: Text('Sort by FullName'),
+                      value: 'full_name',
+                    )
+                  ],
             )
           ],
         ),
+        body: _repoList(),
       ),
     );
   }

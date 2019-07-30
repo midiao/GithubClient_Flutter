@@ -8,6 +8,7 @@ import 'package:github_client/ui/main/home/main_events_page.dart';
 import 'package:github_client/ui/main/main_page_model.dart';
 import 'package:github_client/ui/main/repos/main_repo_page.dart';
 import 'package:provider/provider.dart';
+import 'package:github_client/ui/main/issues/main_issues_page.dart';
 
 class MainPage extends StatefulWidget {
   static final String path = 'main_page';
@@ -22,16 +23,44 @@ class _MainPageState extends State<MainPage>
     with SingleTickerProviderStateMixin {
   final List<List<Image>> _bottomTabIcons = [
     [
-      Image.asset(mainNavEventsNormal, width: 24.0, height: 24.0),
-      Image.asset(mainNavEventsPressed, width: 24.0, height: 24.0),
+      Image.asset(
+        mainNavEventsNormal,
+        width: 24.0,
+        height: 24.0,
+      ),
+      Image.asset(
+        mainNavEventsPressed,
+        width: 24.0,
+        height: 24.0,
+      ),
     ],
     [
-      Image.asset(mainNavReposNormal, width: 24.0, height: 24.0),
-      Image.asset(mainNavReposPressed, width: 24.0, height: 24.0),
+      Image.asset(
+        mainNavReposNormal,
+        width: 24.0,
+        height: 24.0,
+      ),
+      Image.asset(
+        mainNavReposPressed,
+        width: 24.0,
+        height: 24.0,
+      ),
     ],
+    [
+      Image.asset(
+        mainNavIssueNormal,
+        width: 24.0,
+        height: 24.0,
+      ),
+      Image.asset(
+        mainNavIssuePressed,
+        width: 24.0,
+        height: 24.0,
+      )
+    ]
   ];
 
-  final List<String> _bottomTabTitle = ['home', 'repos'];
+  final List<String> _bottomTabTitle = ['home', 'repos', 'issues'];
 
   @override
   void initState() {
@@ -53,6 +82,7 @@ class _MainPageState extends State<MainPage>
             children: <Widget>[
               MainEventsPage(),
               MainReposPage(),
+              MainIssuesPage(),
             ],
             controller: _pageModel.pageController,
             onPageChanged: (index) {
@@ -65,6 +95,8 @@ class _MainPageState extends State<MainPage>
                   _pageModel, MainPageModel.TAB_INDEX_EVENTS),
               _bottomNavigationBarItem(
                   _pageModel, MainPageModel.TAB_INDEX_REPOS),
+              _bottomNavigationBarItem(
+                  _pageModel, MainPageModel.TAB_INDEX_ISSUES),
             ],
             backgroundColor: colorPrimary,
             currentIndex: _pageModel.currentPageIndex,

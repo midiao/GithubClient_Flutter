@@ -18,7 +18,7 @@ class Api {
   static getPageParams(tab, page, [pageSize = Config.PAGE_SIZE]) {
     if (page != null) {
       if (pageSize != null) {
-        return "${tab}page=$page&per_page$pageSize";
+        return "${tab}page=$page&per_page=$pageSize";
       } else {
         return "${tab}page=$page";
       }
