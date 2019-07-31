@@ -9,6 +9,7 @@ import 'package:github_client/ui/main/main_page_model.dart';
 import 'package:github_client/ui/main/repos/main_repo_page.dart';
 import 'package:provider/provider.dart';
 import 'package:github_client/ui/main/issues/main_issues_page.dart';
+import 'package:github_client/ui/main/mine/main_profile_page.dart';
 
 class MainPage extends StatefulWidget {
   static final String path = 'main_page';
@@ -57,10 +58,22 @@ class _MainPageState extends State<MainPage>
         width: 24.0,
         height: 24.0,
       )
+    ],
+    [
+      Image.asset(
+        mainNavProfileNormal,
+        width: 24.0,
+        height: 24.0,
+      ),
+      Image.asset(
+        mainNavProfilePressed,
+        width: 24.0,
+        height: 24.0,
+      )
     ]
   ];
 
-  final List<String> _bottomTabTitle = ['home', 'repos', 'issues'];
+  final List<String> _bottomTabTitle = ['home', 'repos', 'issues', 'me'];
 
   @override
   void initState() {
@@ -83,6 +96,7 @@ class _MainPageState extends State<MainPage>
               MainEventsPage(),
               MainReposPage(),
               MainIssuesPage(),
+              MainProfilePage(),
             ],
             controller: _pageModel.pageController,
             onPageChanged: (index) {
@@ -97,6 +111,8 @@ class _MainPageState extends State<MainPage>
                   _pageModel, MainPageModel.TAB_INDEX_REPOS),
               _bottomNavigationBarItem(
                   _pageModel, MainPageModel.TAB_INDEX_ISSUES),
+              _bottomNavigationBarItem(
+                  _pageModel, MainPageModel.TAB_INDEX_PROFILE),
             ],
             backgroundColor: colorPrimary,
             currentIndex: _pageModel.currentPageIndex,
